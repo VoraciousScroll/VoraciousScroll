@@ -11,5 +11,7 @@ module.exports = function(app, express) {
     saveUninitialized: false,
     resave: true,
   }));
-  app.use(express.static(__dirname + '/../../public'));
+  app.use(express.static(__dirname + '/../../public', {
+    index: 'layout.html'
+  }));
 };
